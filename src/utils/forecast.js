@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
         if(res.data.error){
             callback('Unable to find forecast. try another search', undefined);
         } else{
-            callback(undefined, `${res.data.current.weather_descriptions[0]}. It is crurently ${res.data.current.temperature} degress out. It feels like ${res.data.current.feelslike} degress out. Humidity is ${res.data.current.humidity}.`);
+            callback(undefined, `${res.data.current.weather_descriptions[0]}. It is crurently ${res.data.current.temperature} degress out. It feels like ${res.data.current.feelslike} degress out. The humidity is ${res.data.current.humidity}%.`);
         }
     })
     .catch(function (err){
